@@ -11,19 +11,9 @@
 gain = [-4,-3,-2,-1,4,3,2]
 
 def largestAltitude(gain):
-    cur = 0
-    cur_max = 0
-    for i in gain:
-        cur += i
-        cur_max = max(cur, cur_max)
-    return cur_max
-
-
-
-def largestAltitude2(gain):
-    cur = 0
-    cur_max = 0
-    for i in gain:
-        cur += i
-        cur_max = cur if cur > cur_max else cur_max
-    return cur_max
+    current_altitude = 0
+    max_altitude = 0
+    for altitude_gain in gain:
+        current_altitude += altitude_gain
+        max_altitude = max(current_altitude, max_altitude)
+    return max_altitude
